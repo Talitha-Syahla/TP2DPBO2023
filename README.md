@@ -5,14 +5,14 @@ maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
 
 # TUGAS PRAKTIKUM 2 DPBO 2023
 Buatlah program Java yang terkoneksi dengan database MySQL. Berikut spesifikasi program yang harus dibuat:
-    - Program bebas, kecuali program Mahasiswa dan Book Author
-    - Terdapat proses Create, Read, Update, dan Delete data
-    - Terdapat proses Autentikasi (Login, Register) *
-    - Menggunakan minimal 2 tabel pada database
-    - Harus terdapat minimal 1 properti gambar pada class yang dibuat (gambar akan ditampilkan pada UI)
-    - Terdapat pergantian screen pada UI
-    - Terdapat button navigasi untuk beralih screen
-    - List data ditampilkan menggunakan card (JPanel)
+- Program bebas, kecuali program Mahasiswa dan Book Author
+- Terdapat proses Create, Read, Update, dan Delete data
+- Terdapat proses Autentikasi (Login, Register) *
+- Menggunakan minimal 2 tabel pada database
+- Harus terdapat minimal 1 properti gambar pada class yang dibuat (gambar akan ditampilkan pada UI)
+- Terdapat pergantian screen pada UI
+- Terdapat button navigasi untuk beralih screen
+- List data ditampilkan menggunakan card (JPanel)
 
 File README ini berisikan design program, penjelasan alur program, dan dokumentasi saat program dirun/dijalankan.
 
@@ -32,17 +32,17 @@ Design pada program disini menggunakan 7 Class, yaitu:
 
 1) `Class Login`, Class ini merupakan JFrame yang akan menjadi tampilan paling pertama jika program dijalankan. JFrame ini berfungsi untuk menampilkan form login kepada user. User akan diminta memasukkan _username_ dan _password_ yang sesuai dengan database, jika tidak maka login gagal dilakukkan.
 
-2) Class JPanelCard, Class ini merupakan JFrame yang menjadi halaman utama pada program ini. JFrame ini akan menampilkan data-data berupa data album dan data lagu. Terdapat JScrollPane yang digunakan untuk menampung Card-Card yang berisikan data album dan data lagu. Pada JFrame ini juga terdapat button yang berfungsi untuk mengubah tampilan data, misalnya jika menekan button `Song List` maka data yang akan ditampilan adalah data lagu, begitupun sebaliknya. Selain itu, terdapat button yang berfungsi untuk menambahkan data, misalnya jika menekan button `Add Album` maka program akan menampilkan form untuk menambahkan data album (tambahData/tambahData2) begitupun sebaliknya.
+2) `Class JPanelCard`, Class ini merupakan JFrame yang menjadi halaman utama pada program ini. JFrame ini akan menampilkan data-data berupa data album dan data lagu. Terdapat JScrollPane yang digunakan untuk menampung Card-Card yang berisikan data album dan data lagu. Pada JFrame ini juga terdapat button yang berfungsi untuk mengubah tampilan data, misalnya jika menekan button `Song List` maka data yang akan ditampilan adalah data lagu, begitupun sebaliknya. Selain itu, terdapat button yang berfungsi untuk menambahkan data, misalnya jika menekan button `Add Album` maka program akan menampilkan form untuk menambahkan data album (tambahData/tambahData2) begitupun sebaliknya.
 
-3) Class dbConnection, Class ini berfungsi untuk menghubungkan frame-frame program ke database. Method yang terdapat pada class ini akan digunakan untuk memproses query.
+3) `Class dbConnection`, Class ini berfungsi untuk menghubungkan frame-frame program ke database. Method yang terdapat pada class ini akan digunakan untuk memproses query.
 
-4) Class Card, Class ini merupakan JPanel yang berfungsi untuk menampilkan `data Album`. Pada JPanel ini terdapat button edit yang dapat digunakan untuk mengubah data album dan button delete yang dapat digunakan untuk menghapus data album.
+4) `Class Card`, Class ini merupakan JPanel yang berfungsi untuk menampilkan `data Album`. Pada JPanel ini terdapat button edit yang dapat digunakan untuk mengubah data album dan button delete yang dapat digunakan untuk menghapus data album.
 
-5) Class Card2, Class ini merupakan JPanel yang berfungsi untuk menampilkan `data Lagu`. Pada JPanel ini terdapat button edit yang dapat digunakan untuk mengubah data lagu dan button delete yang dapat digunakan untuk menghapus data lagu.
+5) `Class Card2`, Class ini merupakan JPanel yang berfungsi untuk menampilkan `data Lagu`. Pada JPanel ini terdapat button edit yang dapat digunakan untuk mengubah data lagu dan button delete yang dapat digunakan untuk menghapus data lagu.
 
-6) Class tambahData, Class ini merupakan JPanel yang berfungsi sebagai form inserData dan updateData untuk `data Album`. Pada inserData dan upateData ini user dapat menambahkan dan mengupdate data berupa nama_album, tahun_rilis, dan dapat mengupload gambar dari album tersebut. Terdapat juga button `Submit` yang dapat ditekan oleh user jika sudah mengisikan data-data tersebut. Nantinya data akan secara otomatis masuk ke database.
+6) `Class tambahData`, Class ini merupakan JPanel yang berfungsi sebagai form inserData dan updateData untuk `data Album`. Pada inserData dan upateData ini user dapat menambahkan dan mengupdate data berupa nama_album, tahun_rilis, dan dapat mengupload gambar dari album tersebut. Terdapat juga button `Submit` yang dapat ditekan oleh user jika sudah mengisikan data-data tersebut. Nantinya data akan secara otomatis masuk ke database.
 
-7) Class tambahData2, Class ini merupakan JPanel yang berfungsi sebagai form inserData dan updateData untuk `data Lagu`. Pada inserData dan upateData ini user dapat menambahkan dan mengupdate data berupa nama_lagu, durasi, memilih lagu yang akan diadd atau diedit tersebut terdapat pada album yang mana dan dapat mengupload gambar dari lagu tersebut. Terdapat juga button `Submit` yang dapat ditekan oleh user jika sudah mengisikan data-data tersebut. Nantinya data akan secara otomatis masuk ke database.
+7) `Class tambahData2`, Class ini merupakan JPanel yang berfungsi sebagai form inserData dan updateData untuk `data Lagu`. Pada inserData dan upateData ini user dapat menambahkan dan mengupdate data berupa nama_lagu, durasi, memilih lagu yang akan diadd atau diedit tersebut terdapat pada album yang mana dan dapat mengupload gambar dari lagu tersebut. Terdapat juga button `Submit` yang dapat ditekan oleh user jika sudah mengisikan data-data tersebut. Nantinya data akan secara otomatis masuk ke database.
 
 # Alur Program
 1. Program akan menampilkan form login. User dapat memasukkan _username_ dan _password_ pada textfield yang telah disediakan, lalu dapat menekan tombol `Login`.
@@ -59,8 +59,9 @@ Jika data sudah diisi, dapat menekan tombol `Submit` lalu akan menampilkan JPane
 6. Jika user menekan tombol `edit` maka program akan menampilkan form untuk mengubah data Lagu tersebut. Jika user menekan tombol `delete` maka program akan menampilkan pop up berupa confirm kepada user, jika user memilih `yes` maka data berhasil didelete.
 
 `Akun Login`
-    - `Username` : admin
-    - `Password` : pjm
+ 
+ - `Username` : admin
+ - `Password` : pjm
 
 # Dokumentasi
 
